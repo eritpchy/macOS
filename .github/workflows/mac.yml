@@ -8,6 +8,7 @@ defaults:
 jobs:
   build:
     runs-on: macos-11
+    environment: ENV_VAR
     steps:
     - uses: actions/checkout@v2
     - name: Setting the environment up.
