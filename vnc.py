@@ -2,7 +2,7 @@ import subprocess
 import threading
 
 def run_novnc():
-    subprocess.run(["novnc_proxy", "--vnc", "localhost:5900"], cwd="/Users/Shared/noVNC/utils/")
+    subprocess.run(["novnc_proxy", "--vnc", "localhost:5900"], cwd="/Users/runner/noVNC/utils/")
 def run_ngrok():
     subprocess.run(["ngrok", "http", "6080"])
 
