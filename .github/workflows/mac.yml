@@ -10,7 +10,6 @@ on:
           options:
           - macos-13
           - macos-12
-          - macos-11
 defaults:
   run:
     shell: bash
