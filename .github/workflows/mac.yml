@@ -1,13 +1,23 @@
 name: mac
 on: 
   workflow_dispatch:
+    inputs:
+        macOSVersion:
+          description: 'macOS Version'
+          required: true
+          default: 'macos-13'
+          type: choice
+          options:
+          - macos-13
+          - macos-12
+          - macos-11
 defaults:
   run:
     shell: bash
 
 jobs:
   build:
-    runs-on: macos-13
+    runs-on: ${{ inputs.macOSVersion }}
     environment: ENV_VAR
     steps:
     - uses: actions/checkout@v2
