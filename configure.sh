@@ -30,7 +30,7 @@ brew install --cask ngrok
 
 git clone https://github.com/novnc/noVNC.git
 
-./noVNC/utils/novnc_proxy --vnc localhost:5900
+./noVNC/utils/novnc_proxy --vnc localhost:5900 &
 
 ngrok http 6080 &
 
