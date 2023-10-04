@@ -32,4 +32,4 @@ git clone https://github.com/novnc/noVNC.git
 
 #configure ngrok and start it
 ngrok authtoken $3
-ngrok http 5900 &
+ngrok tcp 5900 &
