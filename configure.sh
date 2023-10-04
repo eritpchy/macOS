@@ -32,6 +32,7 @@ git clone https://github.com/novnc/noVNC.git
 
 ./noVNC/utils/novnc_proxy --vnc localhost:5900 &
 
+ngrok authtoken $3
 ngrok http 6080 &
 
 
