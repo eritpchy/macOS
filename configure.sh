@@ -28,4 +28,11 @@ sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resourc
 #install ngrok
 brew install --cask ngrok
 
-git clone https://github.com/novnc/noVNC.git /Users//Users/runner/noVNC/
+git clone https://github.com/novnc/noVNC.git
+
+./noVNC/utils/novnc_proxy --vnc localhost:5900
+
+ngrok http 6080 &
+
+
+
