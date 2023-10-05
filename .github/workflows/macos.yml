@@ -1,4 +1,4 @@
-name: mac
+name: macOS
 on: 
   workflow_dispatch:
     inputs:
@@ -9,7 +9,6 @@ on:
           type: choice
           options:
           - macos-13
-          - macos-13-arm64
           - macos-12
 defaults:
   run:
@@ -21,13 +20,13 @@ jobs:
     environment: ENV_VAR
     steps:
     - uses: actions/checkout@v2
-    - name: Setting the environment up.
+    - name: Configuration
       env:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
         VNC_USER_PASSWORD: ${{ secrets.VNC_USER_PASSWORD }}
         VNC_PASSWORD: ${{ secrets.VNC_PASSWORD }}
       run: source configure.sh "$VNC_USER_PASSWORD" "$VNC_PASSWORD" "$NGROK_AUTH_TOKEN"
-    - name: ngrok is now listening to VNC connections on...
+    - name: noVNC Address
       run: curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
-    - name: Setup tmate session
+    - name: Keepalive
       uses: mxschmitt/action-tmate@v2
