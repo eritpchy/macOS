@@ -9,6 +9,7 @@ on:
           type: choice
           options:
           - macos-13
+          - macos-13-xlarge
           - macos-12
 defaults:
   run:
