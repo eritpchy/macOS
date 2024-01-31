@@ -26,3 +26,7 @@ brew install --cask ngrok
 #configure ngrok and start it
 ngrok authtoken $3
 ngrok tcp 5900 &
+
+
+osascript -e 'do shell script "open x-apple.systempreferences:com.apple.Sharing-Settings.extension"
+delay 5
