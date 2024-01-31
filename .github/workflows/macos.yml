@@ -8,6 +8,7 @@ on:
           default: 'macos-13'
           type: choice
           options:
+          - macos-14
           - macos-13
           - macos-12
 defaults:
