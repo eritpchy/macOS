@@ -36,7 +36,4 @@ ngrok authtoken $3
 ngrok http 6080 &
 
 
-tell application "System Events"
-	click checkbox "Screen Sharing" of group 1 of scroll area 1 of group 1 of group 2 of splitter group 1 of group 1 of window "Sharing" of application process "System Settings"
-end tell'
 
