@@ -5,7 +5,7 @@ on:
         macOSVersion:
           description: 'macOS Version'
           required: true
-          default: 'macos-13'
+          default: 'macos-14'
           type: choice
           options:
           - macos-14
